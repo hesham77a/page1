@@ -1,0 +1,189 @@
+*{ /* اول خطوة اضع السطرين التالين لتصفير الهوامش*/
+    padding: 0;    margin: 0;}
+/*=========================Header=============================*/
+header{
+    height: 100px;
+    width: 100%;
+    background-image:linear-gradient(to right,rgb(46, 10, 248) , rgba(1, 24, 51, 0.863)) ;
+}
+header a{
+    color: black;
+}
+#IdLogoBox{
+    width: 30%;
+    height: 100%;
+    float: right;
+    background-color: #e2e1e1;
+}
+#IdHeaderH1{
+    float: left;
+    line-height: 100px;
+    padding: 0 5%;
+}
+#IdHeaderlogo{
+    height: 100%;
+    clip-path: circle();
+}
+/*========================Navegator=============================*/
+nav {
+    width: 65%;
+    text-align: center;
+    direction: rtl;
+}
+.ClassNavA{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    display: inline-block;
+}
+#IdNavUl li{
+    display: inline-block;
+    line-height: 100px;
+    width: 130px;
+      text-align: center;
+}
+.ClassNavA:hover{
+    background-color: white;
+    color: black;
+    height: 100%;
+    width: 100%;
+}
+
+
+/*========================Navegator DropButton=============================*/
+
+#IdDropButton{ 
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    width: 130px;
+   
+}
+.ClaassDropButtonA{ 
+    color: #333;
+    font-size: small;
+    font-weight: bold;
+    display: block;
+    height: 80px;
+    text-decoration: none;
+}
+
+#IdDropDown:hover #IdDropButton{
+    display: block;
+
+}
+
+#IdDropButton a:hover {
+    background-color: tomato ;
+    color: white;
+}
+
+
+
+/*========================Marquee1=============================*/
+#IdMarquee1{     margin: 10px 0px;}
+#IdMarquee1 span{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    background: rgb(102, 3, 3);
+    color: white;
+    margin: 0px 10px;
+    padding: 10px;
+    } 
+/*=========================Main=============================*/
+main{
+    width: 100%;
+    height: 600px;
+    background-color: rgb(88, 6, 6);
+    margin-top: 40px;
+    border-top: 3px solid white;
+    animation-name:ChangeBackground ;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+/*clip-path: polygon(7% 0, 100% 0%, 90% 100%, 0% 100%);*/
+}
+@keyframes ChangeBackground{
+    0%{  background-color: rgb(253, 253, 253); }
+    15%{ background-color: rgb(181, 188, 253); }
+    35%{ background-color: rgb(74, 91, 250);   }
+    55%{ background-color: rgb(10, 4, 88);     }
+    75%{ background-color: black;              }
+    85%{ background-color: rgb(29, 14, 160);   }
+    100%{background-color: rgb(126, 128, 255); }
+}
+/*========================Marquee1=============================*/
+#IdMarquee2{     margin: 10px 0px;}
+.ClassMarquee2img{
+   width:600px;
+   height:400px;
+   margin: 80px 100px;
+border-radius: 20px;
+    } 
+
+    
+    /*========================= media ============================*/
+
+  
+  
+@media only screen and (min-width:1560px) and (max-width:1850px){
+    #IdLogoBox{  width: 40%;     }
+    #IdHeaderH1{ Padding: 0 10%;   }
+    }
+
+@media only screen and (min-width:1250px) and (max-width:1559px){
+   #IdLogoBox{   width: 50%;   }
+   #IdHeaderH1{ Padding: 0 10%; }
+   #IdNavUl li,#IdDropButton{      width: 100px;}
+
+}
+@media only screen and (min-width:960px) and (max-width:1249px){
+    #IdLogoBox{    width: 40%;      }
+     #IdHeaderH1{ Padding: 0 5%; font-size: large;}
+     #IdNavUl li,#IdDropButton{    width: 90px;   }    
+}
+
+
+@media only screen and (min-width:805px) and (max-width:959px){
+    #IdLogoBox{        width: 37%;     }
+    #IdHeaderlogo{ width: 20%;  }
+     #IdHeaderH1{ Padding: 0 5%; font-size: medium;}
+     #IdNavUl li{  width: 80px;  }  
+     #IdDropButton{    width: 80px; font-size: xx-small;font-weight: lighter;}  
+    .ClassNavA{ font-weight: bold;   font-size: x-small;}  
+    #IdMarquee1 span{ font-size: medium;}  
+}
+
+@media only screen and (max-width:804px){
+    header{height: auto;}
+    #IdLogoBox{     width: 100%; text-align: center;      }
+    #IdLogoBox a{text-decoration:none;}
+    #IdHeaderH1{float: none; }
+    #IdHeaderlogo{float: none; width: 20%; margin-bottom: 10px;}
+    nav{width: 100%; font-size: small; }
+    #IdNavUl li{  width: 77px;      }
+    #IdDropButton{    width: 77px; font-size: xx-small;font-weight: lighter; } 
+    #IdMarquee1{position: absolute;}
+    #IdMarquee1 span{ font-size: small;}  
+    main{height: auto;}
+    .ClassMarquee2img{
+        width:450px;
+        height:300px;
+             } 
+   
+}
+@media only screen and (max-width:512px){ 
+    body{width: 100%;}
+    #IdLogoBox{   font-size: xx-small;      }
+    #IdNavUl li{display: block; width: 100%; font-size: medium;}
+    #IdDropButton{    width: 100px;  } 
+    #IdArticleDiv{width: 100%;}
+    .ClassMarquee2img{
+        width:250px;
+        height:150px;
+             } 
+
+}   
+
+
